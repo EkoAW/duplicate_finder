@@ -1,3 +1,16 @@
-path: "DropsuiteTest"
+# path to target folder
+path: 'DropsuiteTest'
+
+# search pattern, default '*' (all files)
 pattern: '*'
+
+# set if search including subfolders, default true
 recursive: true
+
+# two steps file compare algorithm
+# 1st: file size
+# 2nd: md5, sha1 default, sha256, byte
+# byte = comparing byte per byte
+
+# 2nd step method, default sha1
+method: sha1

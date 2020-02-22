@@ -15,5 +15,9 @@ if !config.has_key? 'recursive' or ![true, false].include? config['recursive']
   config['recursive'] = true
 end
 
-finder = DupeFinder.new(config['path'], config['pattern'], config['recursive'])
+if !config.has_key? 'method' or !config['method'].is_a? String
+  config['method'] = 'sha1'
+end
+
+finder = DupeFinder.new(config['path'], config['pattern'], config['recursive'], config['method'])
 finder.run()
