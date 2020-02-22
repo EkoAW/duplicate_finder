@@ -1,0 +1,3 @@
+path: "DropsuiteTest"
+pattern: '*'
+recursive: true
